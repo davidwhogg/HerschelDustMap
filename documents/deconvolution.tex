@@ -3,13 +3,46 @@
 
 \documentclass[12pt, preprint]{aastex}
 
+\newcommand{\project}[1]{\textsl{#1}}
+\newcommand{\TheTractor}{\project{The~Tractor}}
+\newcommand{\Herschel}{\project{Herschel}}
+\newcommand{\PACS}{\project{PACS}}
+
+\newcommand{\unit}[1]{{\mathrm{#1}}}
+\newcommand{\mum}{\unit{\mu m}}
+
 \begin{document}
 
-\title{Making high-resolution dust maps from multi-resolution, multi-wavelength imaging data}
+\title{Inferring dust properties from 6-band \Herschel\ imaging
+       but at the resolution of the highest resolution band (\PACS~$70\,\mum$)}
 \author{MK, DL, DWH}
 
 \begin{abstract}
-Hello world.
+In many astronomical projects, images or angular maps are built from
+multi-wavelength imaging that is also multi-resolution:
+Every wavelength is imaged at a different angular resolution.
+One method for uniformizing the resolution is to convolve or blur the
+images to a common (usually the lowest) resolution, discarding
+information.
+Of the alternative approaches, the best from an information-theory
+perspective is to forward model the full stack of multi-band,
+multi-resolution images, accounting for the unique, finite resolution
+of each image.
+To make the problem well-posed, the optimization or inference must be
+regularized with prior information about what kinds of spectral energy
+distributions (SEDs) are possible, and about the smoothness of the map.
+
+Here we perform this forward modeling on \Herschel\ imaging of the
+Andromeda Galaxy to map the dust at resolution of \Herschel's highest
+resolution band.
+We regularize the optimization with a simple model of dust emissivity.
+We demonstrate that we can produce high-resolution dust density and
+temperature maps, and make predictions for (hypothetical future)
+higher-resolution infrared imaging.
+We demonstrate the validity of the maps with cross-validation-like
+tests of their predictive power.
+We discuss limitations and extensions of the method, especially as
+regards the flexibility of the SED model.
 \end{abstract}
 
 \section{Introduction}
