@@ -6,15 +6,17 @@
 \newcommand{\project}[1]{\textsl{#1}}
 \newcommand{\TheTractor}{\project{The~Tractor}}
 \newcommand{\Herschel}{\project{Herschel}}
-\newcommand{\PACS}{\project{PACS}}
+\newcommand{\acronym}[1]{{\small{#1}}}
+\newcommand{\PACS}{\project{\acronym{PACS}}}
+\newcommand{\SPIRE}{\project{\acronym{SPIRE}}}
 
 \newcommand{\unit}[1]{{\mathrm{#1}}}
 \newcommand{\mum}{\unit{\mu m}}
 
 \begin{document}
 
-\title{Inferring dust properties from 6-band \Herschel\ imaging
-       but at the resolution of the highest resolution band (\PACS~$70\,\mum$)}
+\title{Inferring dust properties from 6-band \Herschel\ imaging \\ 
+       but at the resolution of the highest resolution band}
 \author{MK, DL, DWH}
 
 \begin{abstract}
@@ -30,11 +32,10 @@ multi-resolution images, accounting for the unique, finite resolution
 of each image.
 To make the problem well-posed, the optimization or inference must be
 regularized with prior information about what kinds of spectral energy
-distributions (SEDs) are possible, and about the smoothness of the map.
-
-Here we perform this forward modeling on \Herschel\ imaging of the
-Andromeda Galaxy to map the dust at resolution of \Herschel's highest
-resolution band.
+distributions (\acronym{SED}s) are possible, and about the smoothness of the map.
+Here we perform this forward modeling on 6-band \PACS\ and
+\SPIRE\ imaging of the Andromeda Galaxy to map the dust at resolution
+of the highest resolution band (\PACS~$70\,\mum$).
 We regularize the optimization with a simple model of dust emissivity.
 We demonstrate that we can produce high-resolution dust density and
 temperature maps, and make predictions for (hypothetical future)
@@ -42,7 +43,7 @@ higher-resolution infrared imaging.
 We demonstrate the validity of the maps with cross-validation-like
 tests of their predictive power.
 We discuss limitations and extensions of the method, especially as
-regards the flexibility of the SED model.
+regards the flexibility of the \acronym{SED} model.
 \end{abstract}
 
 \section{Introduction}
@@ -64,6 +65,6 @@ Hello World.
 \acknowledgements
 Brent Groves, Karin Sandstrom, Tomas Henning, etc.
 Grant numbers, etc.
-NASA ADS, etc.
+\acronym{NASA ADS}, etc.
 
 \end{document}
