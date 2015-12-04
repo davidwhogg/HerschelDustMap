@@ -34,8 +34,8 @@ To make the problem well-posed, the optimization or inference must be
 regularized with prior information about what kinds of spectral energy
 distributions (\acronym{SED}s) are possible, and about the smoothness of the map.
 Here we perform this forward modeling on 6-band \PACS\ and
-\SPIRE\ imaging of the Andromeda Galaxy to map the dust at the resolution
-of the highest resolution band (\PACS~$70\,\mum$).
+\SPIRE\ imaging of M31 to map the dust at the resolution of the
+highest resolution band (\PACS~$70\,\mum$).
 We regularize the optimization with a simple model of dust emissivity.
 We demonstrate that we can produce high-resolution dust density and
 temperature maps, and make predictions for (hypothetical future)
@@ -52,7 +52,51 @@ Hello World.
 
 \section{Method}
 
-Hello World.
+The goal is to map the dust in \Herschel\ imaging of M31 at high
+angular resolution.
+We want our maps to be \emph{correct}, by which we mean we want them
+to be the best maps we can make under a clear set of assumptions or
+approximations.
+This requires that we clearly state our assumptions.
+
+The assumptions of the method developed in this work are the
+following:
+\begin{itemize}
+\item We have properly calibrated, astrometrically aligned images of
+  the sky.
+\item We have good approximations to the point-spread functions (PSFs)
+  in the images.  Actually, all we really assume is that we know the
+  kernels that smooth the PSF in the best-PSF band to the PSFs of the
+  other bands.
+\item The noise in the images is independent from pixel to pixel and
+  of known variance. DWH: DO WE ASSUME THIS?
+\item At the highest resolution we consider, each pixel contains only
+  a single dust component, with a well-defined temperature and
+  emmissivity parameter, and it's spectral energy distribution (SED)
+  is well described by a particular, rigid emmissivity law.
+\item The map is smooth; that is, the density, temperature, and
+  emmissivity parameter maps vary smoothly, with angular covariance
+  scales we specify.
+\end{itemize}
+All of these assumptions have limitations and are approximations to a
+greater or lesser degree.
+We will return in the Discussion Section to the question of what would
+be different about our results if we modified them.
+That said, it might be worth pointing out here that the weakest
+assumption is the single-dust-component assumption:
+This assumption isn't really consistent at all, since a map that obeys
+this assumption at one resolution (one pixel size) will not, in
+general, obey it at any coarser resolution (larger pixel size).
+
+DWH: data is model plus noise.
+
+DWH: likelihood functon.
+
+DWH: smoothness prior.
+
+DWH: optimization of what now?
+
+DWH: implementation details?
 
 \section{Experiments}
 
@@ -60,7 +104,14 @@ Hello World.
 
 \section{Discussion}
 
-Hello World.
+What did we do?
+
+What can we learn and predict that wasn't possible before?
+
+What is likely to happen if we relax our assumptions?
+
+How would this generalize to situations where there is no SED model,
+or we don't know what regularities exist?
 
 \acknowledgements
 Brent Groves, Karin Sandstrom, Tomas Henning, etc.
