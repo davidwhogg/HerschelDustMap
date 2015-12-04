@@ -3,6 +3,18 @@
 
 \documentclass[12pt, preprint]{aastex}
 
+\newenvironment{hoggitemize}{\begin{list}{$\bullet$}{%
+\topsep=0ex
+\partopsep=0ex
+\itemsep=0.5\parskip
+\parsep=0ex
+\leftmargin=\parindent
+\rightmargin=\parindent
+\listparindent=0em
+\itemindent=-0.5em
+\labelsep=0.5em
+\labelwidth=0em}}{\end{list}}
+
 \newcommand{\project}[1]{\textsl{#1}}
 \newcommand{\TheTractor}{\project{The~Tractor}}
 \newcommand{\Herschel}{\project{Herschel}}
@@ -61,7 +73,7 @@ This requires that we clearly state our assumptions.
 
 The assumptions of the method developed in this work are the
 following:
-\begin{itemize}
+\begin{hoggitemize}
 \item We have properly calibrated, astrometrically aligned images of
   the sky.
 \item We have good approximations to the point-spread functions (PSFs)
@@ -72,12 +84,12 @@ following:
   of known variance. DWH: DO WE ASSUME THIS?
 \item At the highest resolution we consider, each pixel contains only
   a single dust component, with a well-defined temperature and
-  emmissivity parameter, and it's spectral energy distribution (SED)
-  is well described by a particular, rigid emmissivity law.
+  emissivity parameter, and it's spectral energy distribution (SED)
+  is well described by a particular, rigid emissivity law.
 \item The map is smooth; that is, the density, temperature, and
-  emmissivity parameter maps vary smoothly, with angular covariance
+  emissivity parameter maps vary smoothly, with angular covariance
   scales we specify.
-\end{itemize}
+\end{hoggitemize}
 All of these assumptions have limitations and are approximations to a
 greater or lesser degree.
 We will return in the Discussion Section to the question of what would
