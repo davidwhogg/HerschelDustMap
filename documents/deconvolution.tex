@@ -2,6 +2,7 @@
 %% All content is Copyright 2015 the authors.
 
 \documentclass[12pt, preprint]{aastex}
+\usepackage{hyperref}
 
 \newenvironment{hoggitemize}{\begin{list}{$\bullet$}{%
 \topsep=0ex
@@ -15,6 +16,7 @@
 \labelsep=0.5em
 \labelwidth=0em}}{\end{list}}
 
+\newcommand{\doi}[1]{{\footnotesize\href{http://doi.org/#1}{DOI:#1}}}
 \newcommand{\project}[1]{\textsl{#1}}
 \newcommand{\TheTractor}{\project{The~Tractor}}
 \newcommand{\Herschel}{\project{Herschel}}
@@ -61,6 +63,9 @@ regards the flexibility of the \acronym{SED} model.
 \section{Introduction}
 
 Hello World.
+
+DWH: Words about super-resolution imaging and other things.  Make
+reference to \citet{orieux} and things cited therein.
 
 \section{Method}
 
@@ -129,5 +134,13 @@ or we don't know what regularities exist?
 Brent Groves, Karin Sandstrom, Tomas Henning, etc.
 Grant numbers, etc.
 \acronym{NASA ADS}, etc.
+
+\begin{thebibliography}{dummy}
+\bibitem[Orieux et al.(2012)]{orieux}
+Orieux,~F., Giovannelli,~J.-F., Rodet,~T., Abergel,~A., Ayasso,~H., \&, Husson,~M.,
+2012, \aap\ 539, A38 \doi{10.1051/0004-6361/201116817}.
+\end{thebibliography}
+
+
 
 \end{document}
